@@ -7,20 +7,52 @@
 
     <!-- link css -->
     <link rel="stylesheet" href="css\style.css">
+
+    <!-- tailwind -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
 
      <!-- judul -->
     <header>
-        <h1>Todo List Ekans Apps</h1>
+        <h1 class="text-2xl font-bold pb-5" >Todo List Apps</h1>
     </header>
 
     <!-- Semua Content  -->
-    <main></main>
+    <main>
+        <section class="form-section">
+            <form>
+                <input type="text" class="border rounded p-2" id="todo-input" placeholder="Enter a new todo item">
+                <input type="date" class="border rounded p-2" id="todo-date" placeholder="Enter due date">
+            </form>
 
-    
+            <button type="button" onclick="addTodo();" class="border rounded p-2 bg-green-500 text-white">Add Todo</button>
+            <button type="button" onclick="resetFilter()" class="border rounded p-2 bg-gray-500 text-white">Reset Filter</button>
+        </section>
+
+        <section class="flex pt-2 justify-between">
+
+             <button onclick="filterTodos();" class="border rounded p-2 bg-blue-500 text-white">Filter Todos</button>
+            <button onclick="clearTodos();"  class="border rounded p-2 bg-red-500 text-white">Clear All Todos</button>
+            
+        </section>
+
+        <section class="pt-2">
+            <header>
+                <h1 class="text-2xl font-semibold">List Of Todos</h1>
+            </header>
+
+            <ul class="pt-2" id="todo-list">
+            <li>No todos available</li>
+            </ul>
+        </section>
+    </main>
+
+
     <!-- Footer section -->
-    <footer></footer>
+    <footer class="pt-5">
+        <p>&copy; 2025 Todo List Ekans Apps</p>
+    </footer>
 
 
     <!-- link java -->
